@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BookShop — browse books by title, author, and category.">
+    <title>BookShop — Catalogue</title>
+    <link rel="icon" href="assets/bookshop-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css?v=14">
+    <link rel="stylesheet" href="css/index.css?v=13">
+</head>
+<body>
+    <header class="top-bar">
+        <a class="brand" href="index.html?v=13" aria-label="BookShop home">
+            <img src="assets/bookshop-mark.svg" alt="">
+            <span><strong>BookShop</strong><small>Browse. Discover. Read.</small></span>
+        </a>
+        <div class="auth" aria-live="polite">
+            <a class="text-link" href="login-register.html?v=13">Sign in</a>
+            <a class="button button-small" href="login-register.html?v=13#register">Create account</a>
+        </div>
+    </header>
+
+    <section class="store-hero" aria-labelledby="store-hero-title">
+        <div class="hero-copy">
+            <p class="hero-eyebrow">A BOOKSHOP FOR CURIOUS MINDS</p>
+            <h1 id="store-hero-title">Find a book worth <em>getting lost in.</em></h1>
+            <p class="hero-intro">Explore practical guides, technical references, and unforgettable fiction—all gathered in one thoughtful collection.</p>
+            <div class="hero-actions">
+                <a class="button hero-primary" href="#catalogue-heading">Browse the collection <span aria-hidden="true">→</span></a>
+                <span class="hero-note"><b>Fresh picks</b><small>Books for work and wonder</small></span>
+            </div>
+        </div>
+        <div class="hero-library" aria-hidden="true">
+            <div class="hero-orbit hero-orbit-one"></div>
+            <div class="hero-orbit hero-orbit-two"></div>
+            <div class="book-stack">
+                <span class="stack-book stack-book-one"><i>CODE</i></span>
+                <span class="stack-book stack-book-two"><i>IDEAS</i></span>
+                <span class="stack-book stack-book-three"><i>STORIES</i></span>
+            </div>
+            <p>Read beyond<br>the expected.</p>
+        </div>
+    </section>
+
+    <div class="content-row">
+        <aside class="left-aside" aria-label="Catalogue controls">
+            <div class="panel-heading"><h2>Sort &amp; Filter</h2><button class="filter-reset" id="reset-filters" type="button">Reset</button></div>
+            <div class="sort filter-group">
+                <h3>Sort by</h3>
+                <label><input type="radio" name="sort" value="newest-arrivals" checked><span>Newest arrivals</span></label>
+                <label><input type="radio" name="sort" value="title"><span>Title</span></label>
+                <label><input type="radio" name="sort" value="author"><span>Author</span></label>
+                <label><input type="radio" name="sort" value="genre"><span>Category</span></label>
+                <label><input type="radio" name="sort" value="price"><span>Price</span></label>
+            </div>
+            <div class="filter filter-group">
+                <h3>Category</h3>
+                <p class="loading-copy">Loading categories…</p>
+            </div>
+        </aside>
+
+        <main>
+            <div class="main-header">
+                <div><p class="section-kicker">THE COLLECTION</p><h2 id="catalogue-heading">Explore the shelves</h2><p class="results-count" aria-live="polite">Loading books…</p></div>
+                <label class="search-box">
+                    <span class="sr-only">Search books</span>
+                    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.4A7.75 7.75 0 1 1 3.5 11.25a7.75 7.75 0 0 1 15.5 0Z"/></svg>
+                    <input type="search" placeholder="Search books…">
+                </label>
+            </div>
+            <div class="catalogue" aria-live="polite"></div>
+        </main>
+
+        <aside class="right-aside" aria-label="Shopping cart">
+            <div class="cart-heading"><h2>Shopping Cart</h2></div>
+            <p class="loading-copy">Loading your cart…</p>
+        </aside>
+    </div>
+
+    <footer class="site-footer">
+        <span>BookShop</span>
+        <span>Curated reads, thoughtfully delivered.</span>
+    </footer>
+    <div class="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/config.js?v=13"></script>
+    <script src="js/auth-ui.js?v=13"></script>
+    <script src="js/cart.js?v=13"></script>
+    <script src="js/catalogue.js?v=13"></script>
+</body>
+</html>

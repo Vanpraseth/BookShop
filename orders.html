@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View your BookShop orders and shipment tracking.">
+    <title>My Orders — BookShop</title>
+    <link rel="icon" href="assets/bookshop-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css?v=14">
+    <link rel="stylesheet" href="css/orders.css?v=13">
+</head>
+<body>
+    <header class="top-bar">
+        <a class="brand" href="index.html?v=13" aria-label="BookShop home"><img src="assets/bookshop-mark.svg" alt=""><span><strong>BookShop</strong><small>Browse. Discover. Read.</small></span></a>
+        <div class="auth" aria-live="polite"></div>
+    </header>
+
+    <main class="orders-main">
+        <a class="back-link" href="index.html?v=13">← Back to catalogue</a>
+        <div class="orders-heading">
+            <div><p class="eyebrow">YOUR ACCOUNT</p><h1>My Orders</h1><p>Review previous purchases and follow their delivery progress.</p></div>
+            <button class="button button-secondary" id="refresh-orders" type="button">Refresh orders</button>
+        </div>
+        <p class="order-notice" id="order-notice" aria-live="polite"></p>
+        <section class="orders-list" id="orders-list" aria-live="polite">
+            <div class="orders-empty"><p>Loading your orders…</p></div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><span>BookShop</span><span>Your orders and delivery updates</span></footer>
+    <script src="js/config.js?v=13"></script>
+    <script src="js/auth-ui.js?v=13"></script>
+    <script src="js/orders.js?v=13"></script>
+</body>
+</html>
