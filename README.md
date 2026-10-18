@@ -10,6 +10,10 @@
 </p>
 
 <p align="center">
+  <a href="https://vanpraseth.github.io/BookShop/"><strong>Open the live interactive demo</strong></a>
+</p>
+
+<p align="center">
   <img alt="Python 3.12" src="https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white">
   <img alt="Flask" src="https://img.shields.io/badge/Flask-3-000000?logo=flask&logoColor=white">
   <img alt="SQLite" src="https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite&logoColor=white">
@@ -19,6 +23,18 @@
 > [!NOTE]
 > BookShop is a portfolio demonstration. Checkout and payment records are simulated;
 > the application must not be used to collect real payment details.
+
+## Live demo
+
+The [GitHub Pages demo](https://vanpraseth.github.io/BookShop/) includes the customer
+catalogue, cart, checkout, orders, notifications, and administrator dashboard. Use
+the demo bar at the top of the page to switch between customer and administrator
+views or restore the sample data.
+
+The hosted demo runs entirely in the browser. Its sample catalogue and any changes
+you make are stored only in your browser's local storage. The Flask API and SQLite
+database remain available when the full application is run locally or deployed to a
+server that supports Python.
 
 ## Highlights
 
@@ -197,11 +213,11 @@ See [.env.example](.env.example) for the complete reference. The application rea
 environment variables supplied by the shell or hosting platform; it does not commit a
 populated `.env` file.
 
-## Deploy with Docker
+## Deployment
 
-BookShop requires a backend runtime, so GitHub Pages alone cannot host the complete
-application. Use a service that can run the included Dockerfile and attach persistent
-storage.
+The static interactive demo is deployed from the repository's `gh-pages` branch. The
+complete multi-user application requires a backend runtime, so deploy it to a service
+that can run the included Dockerfile and attach persistent storage.
 
 1. Generate a private signing secret:
 
