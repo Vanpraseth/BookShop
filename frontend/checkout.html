@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review your BookShop cart and place an order.">
+    <title>Checkout — BookShop</title>
+    <link rel="icon" href="assets/bookshop-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css?v=14">
+    <link rel="stylesheet" href="css/checkout.css?v=13">
+</head>
+<body>
+    <header class="top-bar">
+        <a class="brand" href="index.html?v=13" aria-label="BookShop home"><img src="assets/bookshop-mark.svg" alt=""><span><strong>BookShop</strong><small>Browse. Discover. Read.</small></span></a>
+        <div class="auth" aria-live="polite"></div>
+    </header>
+
+    <main class="checkout-main">
+        <a class="back-link" href="index.html?v=13">← Continue shopping</a>
+        <div class="page-heading"><h1>Checkout</h1><p>Review your cart and enter a delivery address.</p></div>
+        <div class="checkout-container">
+            <section class="checkout-card cart-summary-card">
+                <div class="card-heading"><h2>Your Cart</h2><span>Review items</span></div>
+                <div id="checkout-cart"><p class="loading-copy">Loading your cart…</p></div>
+            </section>
+            <section class="checkout-card delivery-card">
+                <div class="card-heading"><h2>Delivery Details</h2><span>Required</span></div>
+                <label for="delivery-address">Delivery address</label>
+                <textarea id="delivery-address" rows="5" maxlength="300" placeholder="Street address, suburb, state, postcode" autocomplete="street-address"></textarea>
+                <button class="button" id="place-order-btn" type="button">Place order</button>
+                <p id="checkout-message" aria-live="polite"></p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer"><span>BookShop</span><span>Curated reads, thoughtfully delivered.</span></footer>
+    <script src="js/config.js?v=13"></script>
+    <script src="js/auth-ui.js?v=13"></script>
+    <script src="js/checkout.js?v=13"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View book details at BookShop.">
+    <title>Book details — BookShop</title>
+    <link rel="icon" href="assets/bookshop-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css?v=14">
+    <link rel="stylesheet" href="css/book-page.css?v=13">
+</head>
+<body>
+    <header class="top-bar">
+        <a class="brand" href="index.html?v=13" aria-label="BookShop home"><img src="assets/bookshop-mark.svg" alt=""><span><strong>BookShop</strong><small>Browse. Discover. Read.</small></span></a>
+        <div class="auth" aria-live="polite"></div>
+    </header>
+
+    <div class="content-row">
+        <main class="book-detail">
+            <a class="back-link" href="index.html?v=13">← Back to catalogue</a>
+            <section class="book-card">
+                <div class="book-visual">
+                    <img src="assets/bookshop-mark.svg" alt="">
+                    <span id="book-cover-title">OB</span>
+                </div>
+                <div class="book-content">
+                    <div class="main-header">
+                        <span class="book-category badge">Category</span>
+                        <h1>Loading title…</h1>
+                        <h2>Loading author…</h2>
+                    </div>
+                    <div class="description"><h3>About this book</h3><p>Loading book details…</p></div>
+                    <div class="stock-price-cart">
+                        <div class="purchase-meta"><div><span>Price</span><h2>—</h2></div><div><span>Availability</span><h3>Checking stock…</h3></div></div>
+                        <button class="button add-to-cart-button" type="button">Add to cart</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="right-aside" aria-label="Shopping cart">
+            <div class="cart-heading"><h2>Shopping Cart</h2></div>
+            <p class="loading-copy">Loading your cart…</p>
+        </aside>
+    </div>
+
+    <footer class="site-footer"><span>BookShop</span><span>Curated reads, thoughtfully delivered.</span></footer>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="js/config.js?v=13"></script>
+    <script src="js/auth-ui.js?v=13"></script>
+    <script src="js/cart.js?v=13"></script>
+    <script src="js/book-page.js?v=13"></script>
+</body>
+</html>

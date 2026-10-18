@@ -1,0 +1,26 @@
+.checkout-main { width: min(calc(100% - 40px), 1120px); margin: 32px auto 0; }
+.checkout-main > .back-link { margin-bottom: 6px; }
+.checkout-container { display: grid; grid-template-columns: 1.18fr .82fr; gap: 24px; align-items: start; }
+.checkout-card { padding: 30px; border: 1px solid var(--border); border-radius: 22px; background: var(--surface); box-shadow: var(--shadow); }
+.delivery-card { position: sticky; top: 18px; border-top: 5px solid var(--accent); }
+.card-heading { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 22px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+.card-heading h2 { margin: 0; color: var(--navy); font-family: var(--display); font-size: 1.4rem; }
+.card-heading span { color: var(--muted); font-size: .65rem; text-transform: uppercase; }
+.checkout-item { display: grid; grid-template-columns: 46px minmax(0, 1fr) auto; gap: 13px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--border); }
+.checkout-item-cover { display: grid; place-items: center; width: 46px; height: 62px; border-radius: 4px 9px 9px 4px; color: white; background: linear-gradient(145deg, #315f53, #173f38); box-shadow: -4px 5px 9px rgba(19,54,47,.12); font-family: var(--display); font-size: .8rem; font-weight: 750; }
+.checkout-item strong { display: block; color: var(--navy); font-size: .9rem; }
+.checkout-item p { margin: 3px 0 0; color: var(--muted); font-size: .7rem; }
+.checkout-item-price { text-align: right; }
+.checkout-item-price b { display: block; margin-bottom: 5px; color: var(--success); }
+.checkout-item .remove-button { padding: 0; border: 0; color: var(--danger); background: none; font-size: .65rem; cursor: pointer; }
+.checkout-total { display: flex; justify-content: space-between; margin-top: 18px; color: var(--navy); }
+.checkout-total span { font-size: .76rem; font-weight: 700; text-transform: uppercase; }
+.checkout-total strong { font-size: 1.2rem; }
+.empty-checkout { padding: 25px 0; text-align: center; }
+.delivery-card label { display: block; margin-bottom: 7px; font-size: .76rem; font-weight: 700; }
+.delivery-card textarea { min-height: 125px; padding: 12px; resize: vertical; }
+#place-order-btn { width: 100%; margin-top: 16px; }
+#checkout-message { min-height: 20px; margin: 11px 0 0; font-size: .75rem; font-weight: 700; text-align: center; }
+#checkout-message.error { color: var(--danger); }
+#checkout-message.success { color: var(--success); }
+@media (max-width: 760px) { .checkout-main { width: calc(100% - 20px); } .checkout-container { grid-template-columns: 1fr; } .delivery-card { position: static; } .checkout-card { padding: 23px 19px; } }

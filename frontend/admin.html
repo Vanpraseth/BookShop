@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage the BookShop catalogue, inventory, shipments, and reports.">
+    <title>Admin Dashboard — BookShop</title>
+    <link rel="icon" href="assets/bookshop-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css?v=14">
+    <link rel="stylesheet" href="css/admin.css?v=13">
+</head>
+<body>
+    <header class="top-bar admin-top-bar">
+        <a class="brand" href="admin.html?v=13" aria-label="BookShop admin dashboard">
+            <img src="assets/bookshop-mark.svg" alt="">
+            <span><strong>BookShop</strong><small>Admin dashboard</small></span>
+        </a>
+        <div class="admin-account">
+            <div class="user-summary">
+                <span class="user-avatar" id="admin-avatar">A</span>
+                <span class="user-copy"><small>Administrator</small><strong id="admin-name">Admin</strong></span>
+            </div>
+            <button class="logout-link" id="admin-logout" type="button">Sign out</button>
+        </div>
+    </header>
+
+    <main class="admin-layout">
+        <aside class="admin-sidebar" aria-label="Admin navigation">
+            <p class="sidebar-label">Manage store</p>
+            <nav>
+                <a href="#overview">Overview</a>
+                <a href="#inventory">Books &amp; inventory</a>
+                <a href="#book-form">Add a book</a>
+                <a href="#shipments">Shipments</a>
+                <a href="#reports">Reports</a>
+            </nav>
+            <p class="sidebar-note">Customer carts and checkout are kept separate from admin tools.</p>
+        </aside>
+
+        <div class="admin-content">
+            <section class="admin-heading" id="overview">
+                <div><p class="eyebrow">STORE MANAGEMENT</p><h1>Dashboard</h1><p>Manage the catalogue and monitor store activity.</p></div>
+                <button class="button button-secondary" id="refresh-dashboard" type="button">Refresh data</button>
+            </section>
+
+            <p class="admin-message" id="admin-message" aria-live="polite"></p>
+
+            <section class="metric-grid" aria-label="Store overview">
+                <article class="metric-card"><span>Books</span><strong id="metric-books">—</strong><small>catalogue titles</small></article>
+                <article class="metric-card"><span>Total stock</span><strong id="metric-stock">—</strong><small>copies available</small></article>
+                <article class="metric-card"><span>Orders</span><strong id="metric-orders">—</strong><small>paid orders</small></article>
+                <article class="metric-card"><span>Revenue</span><strong id="metric-revenue">—</strong><small>recorded sales</small></article>
+            </section>
+
+            <section class="admin-panel" id="inventory">
+                <div class="panel-title-row">
+                    <div><p class="eyebrow">CATALOGUE</p><h2>Books &amp; inventory</h2></div>
+                    <div class="panel-actions">
+                        <label class="admin-search"><span class="sr-only">Search inventory</span><input id="inventory-search" type="search" placeholder="Search books…"></label>
+                        <a class="button button-small" href="#book-form">Add a book</a>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Book</th><th>Category</th><th>Price</th><th>Stock</th><th><span class="sr-only">Actions</span></th></tr></thead>
+                        <tbody id="inventory-body"><tr><td colspan="5" class="table-state">Loading inventory…</td></tr></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="admin-panel" id="book-form">
+                <div class="panel-title-row">
+                    <div><p class="eyebrow">BOOK DETAILS</p><h2 id="book-form-title">Add a book</h2></div>
+                    <button class="text-button" id="cancel-edit" type="button" hidden>Cancel editing</button>
+                </div>
+                <form class="book-form" id="admin-book-form">
+                    <label>Title<input name="title" type="text" maxlength="160" required></label>
+                    <label>Author<input name="author" type="text" maxlength="160" required></label>
+                    <label>Category<select name="category_id" id="book-category" required></select></label>
+                    <label>Price<input name="price" type="number" min="0.01" step="0.01" required></label>
+                    <label>Stock quantity<input name="stock" type="number" min="0" step="1" required></label>
+                    <label class="form-wide">Description<textarea name="description" rows="4" maxlength="2000"></textarea></label>
+                    <div class="form-wide form-actions"><button class="button" id="save-book" type="submit">Add book</button></div>
+                </form>
+            </section>
+
+            <section class="admin-panel" id="shipments">
+                <div class="panel-title-row"><div><p class="eyebrow">FULFILMENT</p><h2>Shipments</h2></div></div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Order</th><th>Customer</th><th>Tracking</th><th>Total</th><th>Status</th><th><span class="sr-only">Action</span></th></tr></thead>
+                        <tbody id="shipment-body"><tr><td colspan="6" class="table-state">Loading shipments…</td></tr></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="reports">
+                <div class="section-heading"><p class="eyebrow">STORE ACTIVITY</p><h2>Reports</h2></div>
+                <div class="report-grid">
+                    <article class="admin-panel report-panel">
+                        <h3>Best sellers</h3>
+                        <div id="best-sellers"><p class="table-state">Loading report…</p></div>
+                    </article>
+                    <article class="admin-panel report-panel">
+                        <h3>Low stock</h3>
+                        <div id="low-stock"><p class="table-state">Loading report…</p></div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer"><span>BookShop</span><span>Administrator workspace</span></footer>
+    <script src="js/config.js?v=13"></script>
+    <script src="js/admin.js?v=13"></script>
+</body>
+</html>

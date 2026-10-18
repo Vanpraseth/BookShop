@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img" aria-labelledby="title desc">
+  <title id="title">BookShop logo</title>
+  <desc id="desc">A simple outlined open book.</desc>
+  <rect x="1.5" y="1.5" width="69" height="69" rx="13" fill="#faf8f3" stroke="#d6e1da" stroke-width="3"/>
+  <path d="M12.5 19.5c8.7-2.4 16.5-.4 23.5 6v29c-7-6.4-14.8-8.4-23.5-6V19.5Zm47 0c-8.7-2.4-16.5-.4-23.5 6v29c7-6.4 14.8-8.4 23.5-6V19.5Z" fill="#e8f0eb" stroke="#2f5d50" stroke-linejoin="round" stroke-width="3"/>
+  <path d="M36 25.5v29M19 29c4.6-.5 8.4.5 11.5 3M19 36c4.6-.5 8.4.5 11.5 3M53 29c-4.6-.5-8.4.5-11.5 3M53 36c-4.6-.5-8.4.5-11.5 3" fill="none" stroke="#789b8b" stroke-linecap="round" stroke-width="2.2"/>
+</svg>

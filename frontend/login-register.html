@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in or register for BookShop.">
+    <title>Account — BookShop</title>
+    <link rel="icon" href="assets/bookshop-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css?v=14">
+    <link rel="stylesheet" href="css/login-register.css?v=13">
+</head>
+<body>
+    <header class="top-bar">
+        <a class="brand" href="index.html?v=13" aria-label="BookShop home"><img src="assets/bookshop-mark.svg" alt=""><span><strong>BookShop</strong><small>Browse. Discover. Read.</small></span></a>
+        <div class="auth" aria-live="polite"></div>
+    </header>
+
+    <main class="auth-main">
+        <div class="page-heading"><h1>Welcome</h1><p>Sign in to manage your cart, or create a new account.</p></div>
+        <div class="auth-grid">
+            <section class="login form-panel">
+                <h2>Sign in</h2>
+                <p>Already have an account? Enter your details below.</p>
+                <form id="login-form">
+                    <label>Email address<input type="email" placeholder="you@example.com" autocomplete="email" required></label>
+                    <label>Password<input type="password" placeholder="Enter your password" autocomplete="current-password" required></label>
+                    <button class="button" type="submit">Sign in</button>
+                </form>
+                <p class="auth-message" aria-live="polite"></p>
+            </section>
+
+            <section class="register form-panel" id="register">
+                <h2>Create an account</h2>
+                <p>Register to save books to your cart and place an order.</p>
+                <form id="register-form">
+                    <label>Full name<input type="text" placeholder="Your full name" autocomplete="name" maxlength="120" required></label>
+                    <label>Email address<input type="email" placeholder="you@example.com" autocomplete="email" maxlength="254" required></label>
+                    <label>Password<input type="password" placeholder="At least 8 characters" autocomplete="new-password" minlength="8" maxlength="128" required></label>
+                    <button class="button button-secondary" type="submit">Create account</button>
+                </form>
+                <p class="auth-message" aria-live="polite"></p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer"><span>BookShop</span><span>Curated reads, thoughtfully delivered.</span></footer>
+    <script src="js/config.js?v=13"></script>
+    <script src="js/login-register.js?v=13"></script>
+    <script src="js/auth-ui.js?v=13"></script>
+</body>
+</html>
